@@ -1,0 +1,17 @@
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\TCC.Dropper.Negocio.Repositorio.exe.config
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\TCC.Dropper.Negocio.Repositorio.exe
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\TCC.Dropper.Negocio.Repositorio.pdb
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\Z.EntityFramework.Plus.EF6.dll
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\Z.EntityFramework.Plus.EF6.xml
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\obj\Debug\TCC.Dropper.Negocio.Repositorio.csprojAssemblyReference.cache
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\obj\Debug\TCC.Dropper.Negocio.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\obj\Debug\TCC.Dropper.Negocio.Repositorio.csproj.CopyComplete
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\obj\Debug\TCC.Dropper.Negocio.Repositorio.exe
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\obj\Debug\TCC.Dropper.Negocio.Repositorio.pdb
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\TCC.Dropper.Dom.exe
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\TCC.Dropper.Dom.pdb
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\TCC.Dropper.Dom.exe.config
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio.Repositorio\bin\Debug\EntityFramework.SqlServer.xml

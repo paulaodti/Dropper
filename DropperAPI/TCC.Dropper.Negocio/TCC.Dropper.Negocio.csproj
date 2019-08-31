@@ -53,5 +53,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TCC.Dropper.Dom\TCC.Dropper.Dom.csproj">
+      <Project>{32066444-bc5d-4057-af0a-4b335d956147}</Project>
+      <Name>TCC.Dropper.Dom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TCC.Dropper.Negocio.Repositorio\TCC.Dropper.Negocio.Repositorio.csproj">
+      <Project>{097738a0-8868-4c82-ae40-40314447bf3d}</Project>
+      <Name>TCC.Dropper.Negocio.Repositorio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,12 +55,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DropperModelo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DropperModelo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DropperModelo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DropperModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DropperModelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DropperModelo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicaoValor.cs">
+      <DependentUpon>DropperModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedidorVazao.cs">
+      <DependentUpon>DropperModelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="DropperModelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DropperModelo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DropperModelo.edmx.diagram">
+      <DependentUpon>DropperModelo.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TCC.Dropper.Dom\TCC.Dropper.Dom.csproj">
+      <Project>{32066444-bc5d-4057-af0a-4b335d956147}</Project>
+      <Name>TCC.Dropper.Dom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DropperModelo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DropperModelo.Context.cs</LastGenOutput>
+      <DependentUpon>DropperModelo.edmx</DependentUpon>
+    </Content>
+    <Content Include="DropperModelo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DropperModelo.edmx</DependentUpon>
+      <LastGenOutput>DropperModelo.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

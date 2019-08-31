@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DropperModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MedicaoValor">
+    <Key>
+      <PropertyRef Name="CodMedidorVazao" />
+      <PropertyRef Name="CodMedicaoVazaoValor" />
+      <PropertyRef Name="DataMedicaoVazaoValor" />
+      <PropertyRef Name="MedicaoValor1" />
+    </Key>
+    <Property Name="CodMedidorVazao" Type="Int32" Nullable="false" />
+    <Property Name="CodMedicaoVazaoValor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataMedicaoVazaoValor" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MedicaoValor1" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedidorVazao">
+    <Key>
+      <PropertyRef Name="CodMedidorVazao" />
+      <PropertyRef Name="Identificacao" />
+    </Key>
+    <Property Name="CodMedidorVazao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Identificacao" Type="Int32" Nullable="false" />
+    <Property Name="Descricao" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DropperEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MedicaoValor" EntityType="Self.MedicaoValor" />
+    <EntitySet Name="MedidorVazao" EntityType="Self.MedidorVazao" />
+  </EntityContainer>
+</Schema>
