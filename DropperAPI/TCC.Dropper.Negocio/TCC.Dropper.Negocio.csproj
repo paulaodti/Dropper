@@ -46,8 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IMedicaoValorNegocio.cs" />
+    <Compile Include="Mapper\Mapeamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serviços\MedicaoValorNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -58,10 +61,11 @@
       <Project>{32066444-bc5d-4057-af0a-4b335d956147}</Project>
       <Name>TCC.Dropper.Dom</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TCC.Dropper.Negocio.Repositorio\TCC.Dropper.Negocio.Repositorio.csproj">
-      <Project>{097738a0-8868-4c82-ae40-40314447bf3d}</Project>
-      <Name>TCC.Dropper.Negocio.Repositorio</Name>
+    <ProjectReference Include="..\TCC.Dropper.Repositorio\TCC.Dropper.Repositorio.csproj">
+      <Project>{87C60250-12EA-455F-B95F-424330C6737B}</Project>
+      <Name>TCC.Dropper.Repositorio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

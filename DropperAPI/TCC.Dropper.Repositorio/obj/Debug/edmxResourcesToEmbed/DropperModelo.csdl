@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DropperModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MedicaoValor">
+    <Key>
+      <PropertyRef Name="CodMedicaoVazaoValor" />
+    </Key>
+    <Property Name="CodMedidorVazao" Type="Int32" Nullable="false" />
+    <Property Name="CodMedicaoVazaoValor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataMedicaoVazaoValor" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Valor" Type="Double" Nullable="false" />
+    <NavigationProperty Name="MedidorVazao" Relationship="Self.FK_MedicaoValor_MedicaoVazao" FromRole="MedicaoValor" ToRole="MedidorVazao" />
+  </EntityType>
+  <EntityType Name="MedidorVazao">
+    <Key>
+      <PropertyRef Name="CodMedidorVazao" />
+    </Key>
+    <Property Name="CodMedidorVazao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Identificacao" Type="Int32" Nullable="false" />
+    <Property Name="Descricao" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="MedicaoValors" Relationship="Self.FK_MedicaoValor_MedicaoVazao" FromRole="MedidorVazao" ToRole="MedicaoValor" />
+  </EntityType>
+  <Association Name="FK_MedicaoValor_MedicaoVazao">
+    <End Role="MedidorVazao" Type="Self.MedidorVazao" Multiplicity="1" />
+    <End Role="MedicaoValor" Type="Self.MedicaoValor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedidorVazao">
+        <PropertyRef Name="CodMedidorVazao" />
+      </Principal>
+      <Dependent Role="MedicaoValor">
+        <PropertyRef Name="CodMedidorVazao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DropperEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MedicaoValors" EntityType="Self.MedicaoValor" />
+    <EntitySet Name="MedidorVazaos" EntityType="Self.MedidorVazao" />
+    <AssociationSet Name="FK_MedicaoValor_MedicaoVazao" Association="Self.FK_MedicaoValor_MedicaoVazao">
+      <End Role="MedidorVazao" EntitySet="MedidorVazaos" />
+      <End Role="MedicaoValor" EntitySet="MedicaoValors" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

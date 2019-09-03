@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DropperModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MedicaoValor">
+    <Key>
+      <PropertyRef Name="CodMedicaoVazaoValor" />
+    </Key>
+    <Property Name="CodMedidorVazao" Type="int" Nullable="false" />
+    <Property Name="CodMedicaoVazaoValor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataMedicaoVazaoValor" Type="datetime" Nullable="false" />
+    <Property Name="Valor" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedidorVazao">
+    <Key>
+      <PropertyRef Name="CodMedidorVazao" />
+    </Key>
+    <Property Name="CodMedidorVazao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Identificacao" Type="int" Nullable="false" />
+    <Property Name="Descricao" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_MedicaoValor_MedicaoVazao">
+    <End Role="MedidorVazao" Type="Self.MedidorVazao" Multiplicity="1" />
+    <End Role="MedicaoValor" Type="Self.MedicaoValor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedidorVazao">
+        <PropertyRef Name="CodMedidorVazao" />
+      </Principal>
+      <Dependent Role="MedicaoValor">
+        <PropertyRef Name="CodMedidorVazao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DropperModelStoreContainer">
+    <EntitySet Name="MedicaoValor" EntityType="Self.MedicaoValor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MedidorVazao" EntityType="Self.MedidorVazao" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_MedicaoValor_MedicaoVazao" Association="Self.FK_MedicaoValor_MedicaoVazao">
+      <End Role="MedidorVazao" EntitySet="MedidorVazao" />
+      <End Role="MedicaoValor" EntitySet="MedicaoValor" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

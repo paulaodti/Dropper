@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DropperModelStoreContainer" CdmEntityContainer="DropperEntities">
+    <EntitySetMapping Name="MedicaoValors">
+      <EntityTypeMapping TypeName="DropperModel.MedicaoValor">
+        <MappingFragment StoreEntitySet="MedicaoValor">
+          <ScalarProperty Name="CodMedidorVazao" ColumnName="CodMedidorVazao" />
+          <ScalarProperty Name="CodMedicaoVazaoValor" ColumnName="CodMedicaoVazaoValor" />
+          <ScalarProperty Name="DataMedicaoVazaoValor" ColumnName="DataMedicaoVazaoValor" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedidorVazaos">
+      <EntityTypeMapping TypeName="DropperModel.MedidorVazao">
+        <MappingFragment StoreEntitySet="MedidorVazao">
+          <ScalarProperty Name="CodMedidorVazao" ColumnName="CodMedidorVazao" />
+          <ScalarProperty Name="Identificacao" ColumnName="Identificacao" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

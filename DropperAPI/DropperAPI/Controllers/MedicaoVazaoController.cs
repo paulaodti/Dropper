@@ -1,14 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using TCC.Dropper.Dom.Modelos;
+using Dropper.Negocio.Interfaces;
+using System;
+using System.Net;
+using Dropper.API.Models;
 
 namespace DropperAPI.Controllers
 {
     public class MedicaoVazaoController : ApiController
     {
-        // GET: api/MedicaoVazao
-        public IEnumerable<string> Get()
+        private IMedicaoValorNegocio m_IMedicaoValorNegocio;
+
+        public MedicaoVazaoController(IMedicaoValorNegocio p_IMedicaoValorNegocio)
         {
-            return new string[] { "value1", "value2" };
+            m_IMedicaoValorNegocio = p_IMedicaoValorNegocio;
+        }
+        // GET: api/MedicaoVazao
+        public IHttpActionResult Get()
+        {
+            IEnumerable<MedicaoValorModelo> v_medicaoValorModelos;
+            try
+            {
+                v_medicaoValorModelos = m_IMedicaoValorNegocio.listAllFlowMeasurement();
+            }
+            catch (Exception exception)
+            {
+                return Content(HttpStatusCode.BadRequest,
+                   ResponseGenerator.GenerateErrorResponse((int)HttpStatusCode.BadRequest,
+                    "Erro ao listar veículos.", exception));
+            }
+            return Ok(ResponseGenerator.GenerateSuccessResponse((int)HttpStatusCode.OK,
+                "Recuperação de todos as medições ocorrida com sucesso", v_medicaoValorModelos));
         }
 
         // GET: api/MedicaoVazao/5
@@ -18,17 +41,24 @@ namespace DropperAPI.Controllers
         }
 
         // POST: api/MedicaoVazao
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post([FromBody] MedicaoValorModelo p_MedicaoValorModelo)
         {
+            try
+            {
+                var veiculoModelo = m_IMedicaoValorNegocio.cadastrarValorMedicao(p_MedicaoValorModelo);
+                return Ok(ResponseGenerator.GenerateSuccessResponse((int)HttpStatusCode.OK,
+                $"Inserção do valor {p_MedicaoValorModelo.CodMedicaoVazaoValor} ocorrida com sucesso", veiculoModelo));
+            }
+            catch (Exception exception)
+            {
+                return Content(HttpStatusCode.BadRequest, ResponseGenerator.GenerateErrorResponse((int)HttpStatusCode.BadRequest,
+                        "Erro ao inserir valor.", exception));
+            }
+
         }
 
         // PUT: api/MedicaoVazao/5
         public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/MedicaoVazao/5
-        public void Delete(int id)
         {
         }
     }

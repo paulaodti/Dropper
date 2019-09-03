@@ -10,10 +10,10 @@ C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dr
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\obj\Debug\TCC.Dropper.Negocio.exe
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\obj\Debug\TCC.Dropper.Negocio.pdb
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Dom.exe
-C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Negocio.Repositorio.exe
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\EntityFramework.dll
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Dom.pdb
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Dom.exe.config
-C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Negocio.Repositorio.pdb
-C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Negocio.Repositorio.exe.config
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Repositorio.exe
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Repositorio.pdb
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Repositorio.exe.config
