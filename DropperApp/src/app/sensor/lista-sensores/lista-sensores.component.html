@@ -1,0 +1,33 @@
+<body>
+  <ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          Lista de Sensores
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen>
+      <ion-list inset="true">
+        <div *ngFor="let medidorVazao of medidoresVazao, let i = index">
+            <ion-item button (click)="abrirPopOver($event, medidorVazao)"  class="efeito">
+                <ion-label>{{medidorVazao.Descricao}}</ion-label>
+              </ion-item>
+        </div>
+      </ion-list>
+    </ion-content>
+    <ion-content>
+        <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="Pull to refresh"
+            refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+          </ion-refresher-content>
+        </ion-refresher>
+      </ion-content>
+  </ion-app>
+</body>

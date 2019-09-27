@@ -17,8 +17,13 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
+      title: 'Lista Valores',
+      url: '/valores-vazao',
+      icon: 'pie'
+    },
+    {
+      title: 'Sensores',
+      url: '/sensor',
       icon: 'list'
     }
   ];

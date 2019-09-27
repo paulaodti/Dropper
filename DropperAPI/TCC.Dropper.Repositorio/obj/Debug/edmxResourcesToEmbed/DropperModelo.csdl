@@ -17,7 +17,7 @@
     <Property Name="CodMedidorVazao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Identificacao" Type="Int32" Nullable="false" />
     <Property Name="Descricao" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-    <NavigationProperty Name="MedicaoValors" Relationship="Self.FK_MedicaoValor_MedicaoVazao" FromRole="MedidorVazao" ToRole="MedicaoValor" />
+    <NavigationProperty Name="MedicaoValor" Relationship="Self.FK_MedicaoValor_MedicaoVazao" FromRole="MedidorVazao" ToRole="MedicaoValor" />
   </EntityType>
   <Association Name="FK_MedicaoValor_MedicaoVazao">
     <End Role="MedidorVazao" Type="Self.MedidorVazao" Multiplicity="1" />
@@ -32,11 +32,11 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="DropperEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="MedicaoValors" EntityType="Self.MedicaoValor" />
-    <EntitySet Name="MedidorVazaos" EntityType="Self.MedidorVazao" />
+    <EntitySet Name="MedicaoValor" EntityType="Self.MedicaoValor" />
+    <EntitySet Name="MedidorVazao" EntityType="Self.MedidorVazao" />
     <AssociationSet Name="FK_MedicaoValor_MedicaoVazao" Association="Self.FK_MedicaoValor_MedicaoVazao">
-      <End Role="MedidorVazao" EntitySet="MedidorVazaos" />
-      <End Role="MedicaoValor" EntitySet="MedicaoValors" />
+      <End Role="MedidorVazao" EntitySet="MedidorVazao" />
+      <End Role="MedicaoValor" EntitySet="MedicaoValor" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -122,3 +122,6 @@ C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\Droppe
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\DropperAPI\bin\EntityFramework.xml
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\DropperAPI\bin\EntityFramework.SqlServer.dll
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\DropperAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\DropperAPI\bin\System.Web.Cors.dll
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\DropperAPI\bin\System.Web.Http.Cors.dll
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\DropperAPI\bin\System.Web.Http.Cors.xml

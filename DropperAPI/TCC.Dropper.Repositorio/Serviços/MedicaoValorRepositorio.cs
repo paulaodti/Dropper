@@ -18,7 +18,7 @@ namespace TCC.Dropper.Repositorio.Serviços
                 v_MedicaoValor.CodMedidorVazao = p_MedicaoValorModelo.CodMedidorVazao;
                 v_MedicaoValor.DataMedicaoVazaoValor = p_MedicaoValorModelo.DataMedicaoVazaoValor;
                 v_MedicaoValor.Valor = p_MedicaoValorModelo.Valor;
-                v_Entities.MedicaoValors.Add(v_MedicaoValor);
+                v_Entities.MedicaoValor.Add(v_MedicaoValor);
                 v_Entities.SaveChanges();
                 return v_MedicaoValor;
             }
@@ -28,7 +28,7 @@ namespace TCC.Dropper.Repositorio.Serviços
         {
             using (DropperEntities v_Entities = new DropperEntities())
             {
-                return v_Entities.MedicaoValors.ToList();
+                return v_Entities.MedicaoValor.ToList();
             }
         }
 

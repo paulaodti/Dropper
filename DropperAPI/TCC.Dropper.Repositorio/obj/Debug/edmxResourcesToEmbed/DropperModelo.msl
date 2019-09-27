@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DropperModelStoreContainer" CdmEntityContainer="DropperEntities">
-    <EntitySetMapping Name="MedicaoValors">
+    <EntitySetMapping Name="MedicaoValor">
       <EntityTypeMapping TypeName="DropperModel.MedicaoValor">
         <MappingFragment StoreEntitySet="MedicaoValor">
           <ScalarProperty Name="CodMedidorVazao" ColumnName="CodMedidorVazao" />
@@ -11,7 +11,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MedidorVazaos">
+    <EntitySetMapping Name="MedidorVazao">
       <EntityTypeMapping TypeName="DropperModel.MedidorVazao">
         <MappingFragment StoreEntitySet="MedidorVazao">
           <ScalarProperty Name="CodMedidorVazao" ColumnName="CodMedidorVazao" />

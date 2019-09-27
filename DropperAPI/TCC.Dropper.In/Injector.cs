@@ -3,6 +3,8 @@ using Dropper.Negocio.Interfaces;
 using Dropper.Negocio.Serviços;
 using TCC.Dropper.Repositorio.Interfaces;
 using TCC.Dropper.Repositorio.Serviços;
+using TCC.Dropper.Negocio.Interfaces;
+using TCC.Dropper.Negocio.Serviços;
 
 namespace TCC.Dropper.In
 {
@@ -20,11 +22,13 @@ namespace TCC.Dropper.In
         private static void ConfigurarInjecoesRepositorio()
         {
             ConstrutorContainer.RegisterType<IMedicaoValorRepositorio, MedicaoValorRepositorio>();
+            ConstrutorContainer.RegisterType<IMedidorValorRepositorio, MedidorValorRepositorio>();
         }
 
         private static void ConfigurarInjecoesNegocio()
         {
             ConstrutorContainer.RegisterType<IMedicaoValorNegocio, MedicaoValorNegocio>();
+            ConstrutorContainer.RegisterType<IMedidorValorNegocio, MedidorValorNegocio>();
         }
     }
 }

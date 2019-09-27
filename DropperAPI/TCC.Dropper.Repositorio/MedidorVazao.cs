@@ -17,7 +17,7 @@ namespace TCC.Dropper.Repositorio
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MedidorVazao()
         {
-            this.MedicaoValors = new HashSet<MedicaoValor>();
+            this.MedicaoValor = new HashSet<MedicaoValor>();
         }
     
         public int CodMedidorVazao { get; set; }
@@ -25,6 +25,6 @@ namespace TCC.Dropper.Repositorio
         public string Descricao { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MedicaoValor> MedicaoValors { get; set; }
+        public virtual ICollection<MedicaoValor> MedicaoValor { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f2f7e2c8e3c74189ad451376bdaa6ece" Name="Diagram1">
+      <Diagram DiagramId="a23c977262104ec3992a652fe843f46d" Name="Diagram1">
         <EntityTypeShape EntityType="DropperModel.MedicaoValor" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DropperModel.MedidorVazao" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="DropperModel.FK_MedicaoValor_MedicaoVazao" ManuallyRouted="false" />

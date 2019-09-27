@@ -25,7 +25,7 @@ namespace TCC.Dropper.Repositorio
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<MedicaoValor> MedicaoValors { get; set; }
-        public virtual DbSet<MedidorVazao> MedidorVazaos { get; set; }
+        public virtual DbSet<MedicaoValor> MedicaoValor { get; set; }
+        public virtual DbSet<MedidorVazao> MedidorVazao { get; set; }
     }
 }

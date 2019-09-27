@@ -17,6 +17,8 @@ namespace Dropper.Dom.Mapeamento
         {
             CreateMap<MedicaoValorModelo,MedicaoValor>();
             CreateMap<MedicaoValor, MedicaoValorModelo>();
+            CreateMap<MedidorVazaoModelo, MedidorVazao>();
+            CreateMap<MedidorVazao, MedidorVazaoModelo>();
         }
     }
 }

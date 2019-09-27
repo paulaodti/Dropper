@@ -5,6 +5,7 @@ using Dropper.Negocio.Interfaces;
 using System;
 using System.Net;
 using Dropper.API.Models;
+using System.Web.Http.Cors;
 
 namespace DropperAPI.Controllers
 {
@@ -28,7 +29,7 @@ namespace DropperAPI.Controllers
             {
                 return Content(HttpStatusCode.BadRequest,
                    ResponseGenerator.GenerateErrorResponse((int)HttpStatusCode.BadRequest,
-                    "Erro ao listar veículos.", exception));
+                    "Erro ao medições.", exception));
             }
             return Ok(ResponseGenerator.GenerateSuccessResponse((int)HttpStatusCode.OK,
                 "Recuperação de todos as medições ocorrida com sucesso", v_medicaoValorModelos));
@@ -55,11 +56,6 @@ namespace DropperAPI.Controllers
                         "Erro ao inserir valor.", exception));
             }
 
-        }
-
-        // PUT: api/MedicaoVazao/5
-        public void Put(int id, [FromBody]string value)
-        {
         }
     }
 }
