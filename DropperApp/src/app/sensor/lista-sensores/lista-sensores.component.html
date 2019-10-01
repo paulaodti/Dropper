@@ -10,24 +10,19 @@
         </ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content fullscreen>
+    <ion-content fullscreen ="true">
+      <ion-refresher slot="fixed" pullFactor="0.5" pullMin="10" pullMax="20" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher>
       <ion-list inset="true">
         <div *ngFor="let medidorVazao of medidoresVazao, let i = index">
-            <ion-item button (click)="abrirPopOver($event, medidorVazao)"  class="efeito">
-                <ion-label>{{medidorVazao.Descricao}}</ion-label>
-              </ion-item>
+          <ion-item button (click)="abrirPopOver($event, medidorVazao)" class="efeito">
+            <ion-label>{{medidorVazao.Descricao}}</ion-label>
+          </ion-item>
         </div>
       </ion-list>
     </ion-content>
-    <ion-content>
-        <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-          <ion-refresher-content
-            pullingIcon="arrow-dropdown"
-            pullingText="Pull to refresh"
-            refreshingSpinner="circles"
-            refreshingText="Refreshing...">
-          </ion-refresher-content>
-        </ion-refresher>
-      </ion-content>
   </ion-app>
 </body>
