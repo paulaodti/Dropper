@@ -42,7 +42,7 @@ namespace DropperAPI.Controllers
         }
 
         // POST: api/MedicaoVazao
-        public IHttpActionResult Post([FromBody] MedicaoValorModelo p_MedicaoValorModelo)
+        public IHttpActionResult Post(MedicaoValorModelo p_MedicaoValorModelo)
         {
             try
             {
