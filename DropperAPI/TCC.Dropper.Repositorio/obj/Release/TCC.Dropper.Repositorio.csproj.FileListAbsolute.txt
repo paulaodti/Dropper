@@ -1,0 +1,15 @@
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\TCC.Dropper.Repositorio.exe.config
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\TCC.Dropper.Repositorio.exe
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\TCC.Dropper.Repositorio.pdb
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\EntityFramework.dll
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\TCC.Dropper.Dom.exe
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\TCC.Dropper.Dom.pdb
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\TCC.Dropper.Dom.exe.config
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\EntityFramework.xml
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\obj\Release\TCC.Dropper.Repositorio.csprojAssemblyReference.cache
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\obj\Release\TCC.Dropper.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\obj\Release\TCC.Dropper.Repositorio.csproj.CopyComplete
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\obj\Release\TCC.Dropper.Repositorio.exe
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Repositorio\obj\Release\TCC.Dropper.Repositorio.pdb

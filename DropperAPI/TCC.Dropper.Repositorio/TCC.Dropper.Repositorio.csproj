@@ -67,18 +67,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DropperModelo.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IMedicaoValorRepositorio.cs" />
-    <Compile Include="Interfaces\IMedidorValorRepositorio.cs" />
-    <Compile Include="MedicaoValor.cs">
-      <DependentUpon>DropperModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MedidorVazao.cs">
-      <DependentUpon>DropperModelo.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Interfaces\IVazaoRepositorio.cs" />
+    <Compile Include="Interfaces\ISensorRepositorio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Serviços\MedicaoValorRepositorio.cs" />
-    <Compile Include="Serviços\MedidorValorRepositorio.cs" />
+    <Compile Include="SENSOR.cs">
+      <DependentUpon>DropperModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Serviços\VazaoRepositorio.cs" />
+    <Compile Include="Serviços\SensorRepositorio.cs" />
+    <Compile Include="VAZAO.cs">
+      <DependentUpon>DropperModelo.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DropperModelo.edmx">

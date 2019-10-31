@@ -1,4 +1,4 @@
-import { MedicaoValor } from './../../shared/models/medicao-valor.model';
+import { MedicaoValor } from '../../shared/models/vazao.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';

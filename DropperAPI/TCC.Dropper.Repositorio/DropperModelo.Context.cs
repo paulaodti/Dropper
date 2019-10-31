@@ -13,10 +13,10 @@ namespace TCC.Dropper.Repositorio
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DropperEntities : DbContext
+    public partial class DB_DropperEntities : DbContext
     {
-        public DropperEntities()
-            : base("name=DropperEntities")
+        public DB_DropperEntities()
+            : base("name=DB_DropperEntities")
         {
         }
     
@@ -25,7 +25,7 @@ namespace TCC.Dropper.Repositorio
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<MedicaoValor> MedicaoValor { get; set; }
-        public virtual DbSet<MedidorVazao> MedidorVazao { get; set; }
+        public virtual DbSet<SENSOR> SENSOR { get; set; }
+        public virtual DbSet<VAZAO> VAZAO { get; set; }
     }
 }

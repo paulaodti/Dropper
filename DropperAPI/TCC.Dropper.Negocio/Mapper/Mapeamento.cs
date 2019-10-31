@@ -15,10 +15,10 @@ namespace Dropper.Dom.Mapeamento
         }
         public Mapeamento()
         {
-            CreateMap<MedicaoValorModelo,MedicaoValor>();
-            CreateMap<MedicaoValor, MedicaoValorModelo>();
-            CreateMap<MedidorVazaoModelo, MedidorVazao>();
-            CreateMap<MedidorVazao, MedidorVazaoModelo>();
+            CreateMap<VAZAO,VazaoModelo>();
+            CreateMap<VazaoModelo, VAZAO>();
+            CreateMap<SENSOR, SensorModelo>();
+            CreateMap<SensorModelo, SENSOR>();
         }
     }
 }

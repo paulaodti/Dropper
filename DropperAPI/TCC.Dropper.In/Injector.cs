@@ -21,14 +21,14 @@ namespace TCC.Dropper.In
 
         private static void ConfigurarInjecoesRepositorio()
         {
-            ConstrutorContainer.RegisterType<IMedicaoValorRepositorio, MedicaoValorRepositorio>();
-            ConstrutorContainer.RegisterType<IMedidorValorRepositorio, MedidorValorRepositorio>();
+            ConstrutorContainer.RegisterType<IVazaoRepositorio, VazaoRepositorio>();
+            ConstrutorContainer.RegisterType<ISensorRepositorio, SensorRepositorio>();
         }
 
         private static void ConfigurarInjecoesNegocio()
         {
-            ConstrutorContainer.RegisterType<IMedicaoValorNegocio, MedicaoValorNegocio>();
-            ConstrutorContainer.RegisterType<IMedidorValorNegocio, MedidorValorNegocio>();
+            ConstrutorContainer.RegisterType<IVazaoNegocio, VazaoNegocio>();
+            ConstrutorContainer.RegisterType<ISensorNegocio, SensorNegocio>();
         }
     }
 }

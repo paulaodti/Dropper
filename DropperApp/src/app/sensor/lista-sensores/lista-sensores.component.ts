@@ -1,5 +1,5 @@
 import { EditaSensorComponent } from './../edita-sensor/edita-sensor.component';
-import { MedidorVazao } from './../../shared/models/medidor-vazao.model';
+import { Sensor } from '../../shared/models/sensor.model';
 import { SensorService } from './../../http/sensor/sensor.service';
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
@@ -12,8 +12,8 @@ import { PopoverController } from '@ionic/angular';
 })
 export class ListaSensoresComponent implements OnInit {
 
-  medidorVazao: MedidorVazao;
-  medidoresVazao: MedidorVazao[];
+  medidorVazao: Sensor;
+  medidoresVazao: Sensor[];
   constructor(private sensorService: SensorService, private popoverController: PopoverController) { }
 
   ngOnInit() {
@@ -21,9 +21,9 @@ export class ListaSensoresComponent implements OnInit {
   }
 
   listarTodosOsSensores() {
-    this.sensorService.getAll().then((data: MedidorVazao[]) => {
+    this.sensorService.getAll().then((data: Sensor[]) => {
       this.medidoresVazao = data;
-      this.medidoresVazao.forEach(x => x.Descricao = x.Descricao.trim())
+      this.medidoresVazao.forEach(x => x.DESCRICAO = x.DESCRICAO.trim())
     });
   }
 
@@ -36,19 +36,19 @@ export class ListaSensoresComponent implements OnInit {
     }, 2000);
   }
 
-  clicar(medidor: MedidorVazao, idx: number) {
-    console.log(medidor.Descricao.trim(),idx);
+  clicar(medidor: Sensor, idx: number) {
+    console.log(medidor.DESCRICAO.trim(),idx);
   }
 
-  async abrirPopOver(evt, sensor: MedidorVazao) {
+  async abrirPopOver(evt, sensor: Sensor) {
     let popover = await this.popoverController.create(
       {
         component: EditaSensorComponent,
         event: evt,
         translucent: true,
         componentProps: {
-          id: sensor.CodMedidorVazao,
-          descricao: sensor.Descricao
+          id: sensor.ID_SENSOR,
+          descricao: sensor.DESCRICAO
         }
       })
       return popover.present();

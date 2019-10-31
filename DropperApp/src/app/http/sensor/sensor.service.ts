@@ -1,4 +1,4 @@
-import { MedidorVazao } from './../../shared/models/medidor-vazao.model';
+import { Sensor } from '../../shared/models/sensor.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -12,11 +12,11 @@ const medidorVazaoRoutes = environment.apiPaths.medidor_vazao;
 export class SensorService {
   constructor(private http: HttpClient) {}
 
-  getAll(): Promise<MedidorVazao[]> {
+  getAll(): Promise<Sensor[]> {
     const path = host + medidorVazaoRoutes.getAll;
     return this.http
     .get(path)
-    .pipe(map((res: any) => res.Data as MedidorVazao[]))
+    .pipe(map((res: any) => res.Data as Sensor[]))
     .toPromise();
   }
 }

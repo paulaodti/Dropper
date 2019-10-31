@@ -4,86 +4,84 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DropperModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="MedicaoValor">
+      <Schema Namespace="DB_DropperModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SENSOR">
           <Key>
-            <PropertyRef Name="CodMedicaoVazaoValor" />
+            <PropertyRef Name="ID_SENSOR" />
           </Key>
-          <Property Name="CodMedidorVazao" Type="int" Nullable="false" />
-          <Property Name="CodMedicaoVazaoValor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DataMedicaoVazaoValor" Type="datetime" Nullable="false" />
-          <Property Name="Valor" Type="float" Nullable="false" />
+          <Property Name="ID_SENSOR" Type="int" Nullable="false" />
+          <Property Name="DESCRICAO" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
-        <EntityType Name="MedidorVazao">
+        <EntityType Name="VAZAO">
           <Key>
-            <PropertyRef Name="CodMedidorVazao" />
+            <PropertyRef Name="ID_VAZAO" />
           </Key>
-          <Property Name="CodMedidorVazao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Identificacao" Type="int" Nullable="false" />
-          <Property Name="Descricao" Type="nchar" MaxLength="100" />
+          <Property Name="ID_VAZAO" Type="int" Nullable="false" />
+          <Property Name="ID_SENSOR" Type="int" Nullable="false" />
+          <Property Name="VALOR" Type="decimal" Precision="10" Scale="3" Nullable="false" />
+          <Property Name="DT_MEDICAO" Type="datetime" Nullable="false" />
         </EntityType>
-        <Association Name="FK_MedicaoValor_MedicaoVazao">
-          <End Role="MedidorVazao" Type="Self.MedidorVazao" Multiplicity="1" />
-          <End Role="MedicaoValor" Type="Self.MedicaoValor" Multiplicity="*" />
+        <Association Name="fk_SensorVazao">
+          <End Role="SENSOR" Type="Self.SENSOR" Multiplicity="1" />
+          <End Role="VAZAO" Type="Self.VAZAO" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="MedidorVazao">
-              <PropertyRef Name="CodMedidorVazao" />
+            <Principal Role="SENSOR">
+              <PropertyRef Name="ID_SENSOR" />
             </Principal>
-            <Dependent Role="MedicaoValor">
-              <PropertyRef Name="CodMedidorVazao" />
+            <Dependent Role="VAZAO">
+              <PropertyRef Name="ID_VAZAO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DropperModelStoreContainer">
-          <EntitySet Name="MedicaoValor" EntityType="Self.MedicaoValor" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MedidorVazao" EntityType="Self.MedidorVazao" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_MedicaoValor_MedicaoVazao" Association="Self.FK_MedicaoValor_MedicaoVazao">
-            <End Role="MedidorVazao" EntitySet="MedidorVazao" />
-            <End Role="MedicaoValor" EntitySet="MedicaoValor" />
+        <EntityContainer Name="DB_DropperModelStoreContainer">
+          <EntitySet Name="SENSOR" EntityType="Self.SENSOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VAZAO" EntityType="Self.VAZAO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_SensorVazao" Association="Self.fk_SensorVazao">
+            <End Role="SENSOR" EntitySet="SENSOR" />
+            <End Role="VAZAO" EntitySet="VAZAO" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DropperModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="MedicaoValor">
+      <Schema Namespace="DB_DropperModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SENSOR">
           <Key>
-            <PropertyRef Name="CodMedicaoVazaoValor" />
+            <PropertyRef Name="ID_SENSOR" />
           </Key>
-          <Property Name="CodMedidorVazao" Type="Int32" Nullable="false" />
-          <Property Name="CodMedicaoVazaoValor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DataMedicaoVazaoValor" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Valor" Type="Double" Nullable="false" />
-          <NavigationProperty Name="MedidorVazao" Relationship="Self.FK_MedicaoValor_MedicaoVazao" FromRole="MedicaoValor" ToRole="MedidorVazao" />
+          <Property Name="ID_SENSOR" Type="Int32" Nullable="false" />
+          <Property Name="DESCRICAO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="VAZAO" Relationship="Self.fk_SensorVazao" FromRole="SENSOR" ToRole="VAZAO" />
         </EntityType>
-        <EntityType Name="MedidorVazao">
+        <EntityType Name="VAZAO">
           <Key>
-            <PropertyRef Name="CodMedidorVazao" />
+            <PropertyRef Name="ID_VAZAO" />
           </Key>
-          <Property Name="CodMedidorVazao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Identificacao" Type="Int32" Nullable="false" />
-          <Property Name="Descricao" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="MedicaoValor" Relationship="Self.FK_MedicaoValor_MedicaoVazao" FromRole="MedidorVazao" ToRole="MedicaoValor" />
+          <Property Name="ID_VAZAO" Type="Int32" Nullable="false" />
+          <Property Name="ID_SENSOR" Type="Int32" Nullable="false" />
+          <Property Name="VALOR" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
+          <Property Name="DT_MEDICAO" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="SENSOR" Relationship="Self.fk_SensorVazao" FromRole="VAZAO" ToRole="SENSOR" />
         </EntityType>
-        <Association Name="FK_MedicaoValor_MedicaoVazao">
-          <End Role="MedidorVazao" Type="Self.MedidorVazao" Multiplicity="1" />
-          <End Role="MedicaoValor" Type="Self.MedicaoValor" Multiplicity="*" />
+        <Association Name="fk_SensorVazao">
+          <End Role="SENSOR" Type="Self.SENSOR" Multiplicity="1" />
+          <End Role="VAZAO" Type="Self.VAZAO" Multiplicity="0..1" />
           <ReferentialConstraint>
-            <Principal Role="MedidorVazao">
-              <PropertyRef Name="CodMedidorVazao" />
+            <Principal Role="SENSOR">
+              <PropertyRef Name="ID_SENSOR" />
             </Principal>
-            <Dependent Role="MedicaoValor">
-              <PropertyRef Name="CodMedidorVazao" />
+            <Dependent Role="VAZAO">
+              <PropertyRef Name="ID_VAZAO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DropperEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="MedicaoValor" EntityType="Self.MedicaoValor" />
-          <EntitySet Name="MedidorVazao" EntityType="Self.MedidorVazao" />
-          <AssociationSet Name="FK_MedicaoValor_MedicaoVazao" Association="Self.FK_MedicaoValor_MedicaoVazao">
-            <End Role="MedidorVazao" EntitySet="MedidorVazao" />
-            <End Role="MedicaoValor" EntitySet="MedicaoValor" />
+        <EntityContainer Name="DB_DropperEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SENSOR" EntityType="Self.SENSOR" />
+          <EntitySet Name="VAZAO" EntityType="Self.VAZAO" />
+          <AssociationSet Name="fk_SensorVazao" Association="Self.fk_SensorVazao">
+            <End Role="SENSOR" EntitySet="SENSOR" />
+            <End Role="VAZAO" EntitySet="VAZAO" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -91,23 +89,22 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DropperModelStoreContainer" CdmEntityContainer="DropperEntities">
-          <EntitySetMapping Name="MedicaoValor">
-            <EntityTypeMapping TypeName="DropperModel.MedicaoValor">
-              <MappingFragment StoreEntitySet="MedicaoValor">
-                <ScalarProperty Name="CodMedidorVazao" ColumnName="CodMedidorVazao" />
-                <ScalarProperty Name="CodMedicaoVazaoValor" ColumnName="CodMedicaoVazaoValor" />
-                <ScalarProperty Name="DataMedicaoVazaoValor" ColumnName="DataMedicaoVazaoValor" />
-                <ScalarProperty Name="Valor" ColumnName="Valor" />
+        <EntityContainerMapping StorageEntityContainer="DB_DropperModelStoreContainer" CdmEntityContainer="DB_DropperEntities">
+          <EntitySetMapping Name="SENSOR">
+            <EntityTypeMapping TypeName="DB_DropperModel.SENSOR">
+              <MappingFragment StoreEntitySet="SENSOR">
+                <ScalarProperty Name="ID_SENSOR" ColumnName="ID_SENSOR" />
+                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="MedidorVazao">
-            <EntityTypeMapping TypeName="DropperModel.MedidorVazao">
-              <MappingFragment StoreEntitySet="MedidorVazao">
-                <ScalarProperty Name="CodMedidorVazao" ColumnName="CodMedidorVazao" />
-                <ScalarProperty Name="Identificacao" ColumnName="Identificacao" />
-                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <EntitySetMapping Name="VAZAO">
+            <EntityTypeMapping TypeName="DB_DropperModel.VAZAO">
+              <MappingFragment StoreEntitySet="VAZAO">
+                <ScalarProperty Name="ID_VAZAO" ColumnName="ID_VAZAO" />
+                <ScalarProperty Name="ID_SENSOR" ColumnName="ID_SENSOR" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+                <ScalarProperty Name="DT_MEDICAO" ColumnName="DT_MEDICAO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,17 +1,17 @@
 export const apiPaths = {
   medicao_valor: {
-    getAll: 'MedicaoVazao',
+    getAll: 'Vazao',
     get: function(id) {
-      return `MedicaoVazao/${id}`;
+      return `Vazao/${id}`;
     }
   },
   medidor_vazao: {
-    getAll: 'MedidorVazao',
+    getAll: 'Sensor',
     edit: function(id) {
-      return `MedidorVazao/${id}`;
+      return `Sensor/${id}`;
     },
     delete: function(id) {
-      return `MacroPonto/${id}`;
+      return `Sensor/${id}`;
     }
   }
 };
