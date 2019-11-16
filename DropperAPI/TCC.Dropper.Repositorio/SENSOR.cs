@@ -14,9 +14,17 @@ namespace TCC.Dropper.Repositorio
     
     public partial class SENSOR
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SENSOR()
+        {
+            this.VAZAO = new HashSet<VAZAO>();
+        }
+    
         public int ID_SENSOR { get; set; }
         public string DESCRICAO { get; set; }
+        public bool ENTRADA_GLOBAL { get; set; }
     
-        public virtual VAZAO VAZAO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VAZAO> VAZAO { get; set; }
     }
 }

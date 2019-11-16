@@ -32,14 +32,27 @@ namespace TCC.Dropper.Repositorio.Serviços
             }
         }
 
-        public IEnumerable<VAZAO> listarTodosVazaoByDate(DateTime p_InicialDate, DateTime p_FinalDate)
+        public IEnumerable<VAZAO> listarTodosVazaoByFilter(FiltroVazaoModelo filtro)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<VAZAO> listarTodosVazaoBySensorID(int p_SensorID)
-        {
-            throw new NotImplementedException();
+            
+            using (DB_DropperEntities v_Entities = new DB_DropperEntities())
+            {
+                IEnumerable<VAZAO> listaFiltrada = new List<VAZAO>();
+                listaFiltrada = v_Entities.VAZAO;
+                if (filtro.dataInicial != null)
+                {
+                    listaFiltrada = listaFiltrada.Where(vazao => vazao.DT_MEDICAO.CompareTo(filtro.dataInicial) >= 0);
+                }
+                if (filtro.dataFinal != null)
+                {
+                    listaFiltrada = listaFiltrada.Where(vazao => vazao.DT_MEDICAO.CompareTo(filtro.dataFinal) <= 0);
+                }
+                if (filtro.idSensor != null)
+                {
+                    listaFiltrada = listaFiltrada.Where(vazao => vazao.ID_SENSOR == filtro.idSensor);
+                }
+                return listaFiltrada.ToList();
+            }
         }
     }
 }

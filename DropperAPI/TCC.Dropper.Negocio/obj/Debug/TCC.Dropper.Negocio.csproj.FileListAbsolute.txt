@@ -1,5 +1,3 @@
-C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\obj\Debug\TCC.Dropper.Negocio.csprojAssemblyReference.cache
-C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\obj\Debug\TCC.Dropper.Negocio.csproj.CoreCompileInputs.cache
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Negocio.exe.config
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Negocio.exe
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\TCC.Dropper.Negocio.pdb
@@ -14,6 +12,8 @@ C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dr
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\AutoMapper.pdb
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\AutoMapper.xml
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\obj\Debug\TCC.Dropper.Negocio.csprojAssemblyReference.cache
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\obj\Debug\TCC.Dropper.Negocio.csproj.CoreCompileInputs.cache
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\obj\Debug\TCC.Dropper.Negocio.csproj.CopyComplete
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\obj\Debug\TCC.Dropper.Negocio.exe
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Negocio\obj\Debug\TCC.Dropper.Negocio.pdb

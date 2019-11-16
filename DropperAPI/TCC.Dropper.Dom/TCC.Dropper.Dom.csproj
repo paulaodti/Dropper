@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumerables\PeriodoEnum.cs" />
+    <Compile Include="Modelos\FiltroVazaoModelo.cs" />
     <Compile Include="Modelos\VazaoModelo.cs" />
     <Compile Include="Modelos\SensorModelo.cs" />
     <Compile Include="Program.cs" />

@@ -6,6 +6,7 @@
         <MappingFragment StoreEntitySet="SENSOR">
           <ScalarProperty Name="ID_SENSOR" ColumnName="ID_SENSOR" />
           <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="ENTRADA_GLOBAL" ColumnName="ENTRADA_GLOBAL" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

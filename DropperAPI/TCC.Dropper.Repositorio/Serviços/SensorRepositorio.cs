@@ -16,5 +16,21 @@ namespace TCC.Dropper.Repositorio.Serviços
                 return entities.SENSOR.ToList();
             }
         }
+
+        public SENSOR EditarSensor(int id, string descricao, bool entradaGlobal)
+        {
+            using (DB_DropperEntities entities = new DB_DropperEntities())
+            {
+                SENSOR sensorbanco = entities.SENSOR.Where(sensor => sensor.ID_SENSOR == id).FirstOrDefault();
+                if (sensorbanco == null)
+                {
+                    throw new KeyNotFoundException("Sensor não encontrado");
+                }
+                sensorbanco.DESCRICAO = descricao;
+                sensorbanco.ENTRADA_GLOBAL = entradaGlobal;
+                entities.SaveChanges();
+                return sensorbanco;
+            }
+        }
     }
 }

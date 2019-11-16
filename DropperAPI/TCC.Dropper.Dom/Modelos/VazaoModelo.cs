@@ -6,7 +6,7 @@ namespace TCC.Dropper.Dom.Modelos
     {
         public int ID_VAZAO { get; set; }
         public int ID_SENSOR { get; set; }
-        public decimal VALOR { get; set; }
+        public double VALOR { get; set; }
         public DateTime DT_MEDICAO { get; set; }
     }
 }

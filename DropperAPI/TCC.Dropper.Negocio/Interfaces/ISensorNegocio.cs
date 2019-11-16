@@ -10,5 +10,6 @@ namespace TCC.Dropper.Negocio.Interfaces
     public interface ISensorNegocio
     {
         IEnumerable<SensorModelo> ListarTodosOsSensores();
+        SensorModelo EditarSensor(int id, SensorModelo sensor);
     }
 }

@@ -4,3 +4,4 @@ C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dr
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Dom\obj\Debug\TCC.Dropper.Dom.csproj.CoreCompileInputs.cache
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Dom\obj\Debug\TCC.Dropper.Dom.exe
 C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Dom\obj\Debug\TCC.Dropper.Dom.pdb
+C:\Users\Paulão\Desktop\TCCII\Repositorio\Dropper-API\Dropper\DropperAPI\TCC.Dropper.Dom\obj\Debug\TCC.Dropper.Dom.csprojAssemblyReference.cache

@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b43c4ffe4af0462889b977a91ea6e9bc" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_DropperModel.SENSOR" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+      <Diagram DiagramId="1056d2935b834462be67d9e5ff82ce69" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_DropperModel.SENSOR" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_DropperModel.VAZAO" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="DB_DropperModel.fk_SensorVazao" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DropperModel.FK_VAZAO_SENSOR" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

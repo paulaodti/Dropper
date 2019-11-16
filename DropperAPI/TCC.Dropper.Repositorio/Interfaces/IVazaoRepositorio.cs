@@ -10,8 +10,7 @@ namespace TCC.Dropper.Repositorio.Interfaces
     public interface IVazaoRepositorio
     {
         IEnumerable<VAZAO> listarTodosVazao();
-        IEnumerable<VAZAO> listarTodosVazaoBySensorID(int p_SensorID);
-        IEnumerable<VAZAO> listarTodosVazaoByDate(DateTime p_InicialDate, DateTime p_FinalDate);
+        IEnumerable<VAZAO> listarTodosVazaoByFilter(FiltroVazaoModelo filtro);
         VAZAO cadastrarValorModelo(VazaoModelo p_VazaoModelo);
     }
 }

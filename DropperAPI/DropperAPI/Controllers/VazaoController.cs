@@ -34,15 +34,28 @@ namespace DropperAPI.Controllers
                 "Recuperação de todos as medições ocorrida com sucesso", v_VazaoModelos));
         }
 
-        // GET: api/MedicaoVazao/5
-        public string Get(int id)
+        [Route("api/Vazao/Filtrar")]
+        [HttpPost]
+        public IHttpActionResult FiltrarVazao(FiltroVazaoModelo filtroVazaoModelo)
         {
-            return "value";
+            IEnumerable<VazaoModelo> v_VazaoModelos;
+            try
+            {
+                v_VazaoModelos = m_IVazaoNegocio.listFlowMeasurementByFilter(filtroVazaoModelo);
+            }
+            catch (Exception exception)
+            {
+                return Content(HttpStatusCode.BadRequest,
+                   ResponseGenerator.GenerateErrorResponse((int)HttpStatusCode.BadRequest,
+                    "Erro ao medições.", exception));
+            }
+            return Ok(ResponseGenerator.GenerateSuccessResponse((int)HttpStatusCode.OK,
+                "Recuperação de todos as medições ocorrida com sucesso", v_VazaoModelos));
         }
 
-        // POST: api/MedicaoVazao
-        public IHttpActionResult Post(VazaoModelo p_VazaoModelo)
-        {
+        [HttpPost]
+         public IHttpActionResult Post(VazaoModelo p_VazaoModelo)
+         {
             try
             {
                 VazaoModelo vazaoModelo = m_IVazaoNegocio.cadastrarValorMedicao(p_VazaoModelo);
@@ -54,7 +67,7 @@ namespace DropperAPI.Controllers
                 return Content(HttpStatusCode.BadRequest, ResponseGenerator.GenerateErrorResponse((int)HttpStatusCode.BadRequest,
                         "Erro ao inserir valor.", exception));
             }
+        }
 
         }
     }
-}

@@ -16,7 +16,7 @@ namespace TCC.Dropper.Repositorio
     {
         public int ID_VAZAO { get; set; }
         public int ID_SENSOR { get; set; }
-        public decimal VALOR { get; set; }
+        public double VALOR { get; set; }
         public System.DateTime DT_MEDICAO { get; set; }
     
         public virtual SENSOR SENSOR { get; set; }

@@ -1,7 +1,10 @@
 using System.Web.Http;
-using WebActivatorEx;
 using DropperAPI;
 using Swashbuckle.Application;
+using System.Web;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -20,7 +23,10 @@ namespace DropperAPI
                         // However, there may be situations (e.g. proxy and load-balanced environments) where this does not
                         // resolve correctly. You can workaround this by providing your own code to determine the root URL.
                         //
-                        //c.RootUrl(req => GetRootUrlFromAppConfig());
+                        IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
+                        
+                        var ipCurrent = localIPs.Where(x => x.AddressFamily == AddressFamily.InterNetwork).FirstOrDefault();
+                        c.RootUrl(req => $"http://{ipCurrent.ToString()}:45455");
 
                         // If schemes are not explicitly provided in a Swagger 2.0 document, then the scheme used to access
                         // the docs is taken as the default. If your API supports multiple schemes and you want to be explicit
@@ -61,7 +67,7 @@ namespace DropperAPI
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")
@@ -182,7 +188,7 @@ namespace DropperAPI
                         // Use the "DocumentTitle" option to change the Document title.
                         // Very helpful when you have multiple Swagger pages open, to tell them apart.
                         //
-                        //c.DocumentTitle("My Swagger UI");
+                        c.DocumentTitle("Dropper");
 
                         // Use the "InjectStylesheet" option to enrich the UI with one or more additional CSS stylesheets.
                         // The file must be included in your project as an "Embedded Resource", and then the resource's

@@ -6,34 +6,35 @@
     </Key>
     <Property Name="ID_SENSOR" Type="Int32" Nullable="false" />
     <Property Name="DESCRICAO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="VAZAO" Relationship="Self.fk_SensorVazao" FromRole="SENSOR" ToRole="VAZAO" />
+    <Property Name="ENTRADA_GLOBAL" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="VAZAO" Relationship="Self.FK_VAZAO_SENSOR" FromRole="SENSOR" ToRole="VAZAO" />
   </EntityType>
   <EntityType Name="VAZAO">
     <Key>
       <PropertyRef Name="ID_VAZAO" />
     </Key>
-    <Property Name="ID_VAZAO" Type="Int32" Nullable="false" />
+    <Property Name="ID_VAZAO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ID_SENSOR" Type="Int32" Nullable="false" />
-    <Property Name="VALOR" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="VALOR" Type="Double" Nullable="false" />
     <Property Name="DT_MEDICAO" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="SENSOR" Relationship="Self.fk_SensorVazao" FromRole="VAZAO" ToRole="SENSOR" />
+    <NavigationProperty Name="SENSOR" Relationship="Self.FK_VAZAO_SENSOR" FromRole="VAZAO" ToRole="SENSOR" />
   </EntityType>
-  <Association Name="fk_SensorVazao">
+  <Association Name="FK_VAZAO_SENSOR">
     <End Role="SENSOR" Type="Self.SENSOR" Multiplicity="1" />
-    <End Role="VAZAO" Type="Self.VAZAO" Multiplicity="0..1" />
+    <End Role="VAZAO" Type="Self.VAZAO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SENSOR">
         <PropertyRef Name="ID_SENSOR" />
       </Principal>
       <Dependent Role="VAZAO">
-        <PropertyRef Name="ID_VAZAO" />
+        <PropertyRef Name="ID_SENSOR" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="DB_DropperEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="SENSOR" EntityType="Self.SENSOR" />
     <EntitySet Name="VAZAO" EntityType="Self.VAZAO" />
-    <AssociationSet Name="fk_SensorVazao" Association="Self.fk_SensorVazao">
+    <AssociationSet Name="FK_VAZAO_SENSOR" Association="Self.FK_VAZAO_SENSOR">
       <End Role="SENSOR" EntitySet="SENSOR" />
       <End Role="VAZAO" EntitySet="VAZAO" />
     </AssociationSet>

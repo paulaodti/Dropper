@@ -7,8 +7,8 @@ namespace Dropper.Negocio.Interfaces
     public interface IVazaoNegocio
     {
         IEnumerable<VazaoModelo> listAllFlowMeasurement();
-        IEnumerable<VazaoModelo> listFlowMeasurementBySensorID(int p_SensorID);
-        IEnumerable<VazaoModelo> listFlowMeasurementByDate(DateTime p_InicialDate, DateTime p_FinalDate);
+        IEnumerable<VazaoModelo> listFlowMeasurementByFilter(FiltroVazaoModelo filtro);
         VazaoModelo cadastrarValorMedicao(VazaoModelo p_VazaoModelo);
+        void InserirValores();
     }
 }

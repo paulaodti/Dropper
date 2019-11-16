@@ -6,5 +6,6 @@ namespace TCC.Dropper.Dom.Modelos
     {
         public int ID_SENSOR { get; set; }
         public string DESCRICAO { get; set; }
+        public bool ENTRADA_GLOBAL { get; set; }
     }
 }

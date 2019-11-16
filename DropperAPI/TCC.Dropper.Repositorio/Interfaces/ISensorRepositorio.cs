@@ -9,5 +9,6 @@ namespace TCC.Dropper.Repositorio.Interfaces
    public interface ISensorRepositorio
     {
         IEnumerable<SENSOR> ListarTodosOsSensores();
+        SENSOR EditarSensor(int id, string descricao, bool entradaGlobal);
     }
 }

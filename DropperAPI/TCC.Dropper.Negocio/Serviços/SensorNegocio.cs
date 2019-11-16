@@ -23,5 +23,12 @@ namespace TCC.Dropper.Negocio.Serviços
             return medidorVazaoModelos;
 
         }
+
+        public SensorModelo EditarSensor(int id, SensorModelo sensor)
+        {
+            SensorModelo medidorVazaoModelo = new SensorModelo();
+            AutoMapper.Mapper.Map(this.sensorRepositorio.EditarSensor(id,sensor.DESCRICAO, sensor.ENTRADA_GLOBAL), medidorVazaoModelo);
+            return medidorVazaoModelo;
+        }
     }
 }
